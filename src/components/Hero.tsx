@@ -66,7 +66,7 @@ export const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Hero Center-Right B&W Seated Photo Composition */}
+          {/* Hero Center-Right Seated Photo Composition */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,15 +76,15 @@ export const Hero: React.FC = () => {
             {/* Left Translucent Lavender Vertical Block */}
             <div className="absolute -left-10 top-0 bottom-0 w-28 sm:w-36 bg-[#D8C7F5]/45 pointer-events-none -z-0"></div>
 
-            {/* Seated B&W Portrait Frame displaying hero_portrait.png */}
+            {/* Seated Portrait Frame displaying hero_meena_section1.png */}
             <div className="relative z-10 w-full max-w-[420px] lg:max-w-[460px] aspect-[4/5] p-2 bg-[#EFECE6] border border-[#D5CDBF] shadow-2xl overflow-hidden group">
               <div className="w-full h-full relative overflow-hidden bg-stone-200">
                 <img 
-                  src="/images/hero_portrait.png" 
-                  alt="Meena Chhabbria - Seated B&W Portrait" 
+                  src="/images/hero_meena_section1.png" 
+                  alt="Meena Chhabbria - Seated Portrait" 
                   className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
-                    e.currentTarget.src = "/images/hero_meena.png";
+                    e.currentTarget.src = "/images/grey_hero_authentic.png";
                   }}
                 />
                 
