@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 220" fill="none">
+  <defs>
+    <radialGradient id="bookGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#160E24" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="coverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1A47" />
+      <stop offset="100%" stop-color="#120921" />
+    </linearGradient>
+    <linearGradient id="spineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4C1D95" />
+      <stop offset="100%" stop-color="#2D1A47" />
+    </linearGradient>
+  </defs>
+
+  <!-- Purple Ambient Glow -->
+  <circle cx="160" cy="110" r="100" fill="url(#bookGlow)" />
+
+  <!-- Stacked Books Base (Left) -->
+  <g transform="translate(20, 130)">
+    <rect x="10" y="30" width="110" h="14" rx="2" fill="#3B2166" />
+    <rect x="12" y="32" width="106" h="10" rx="1" fill="#E5E0F0" opacity="0.9" />
+    
+    <rect x="5" y="14" width="115" h="15" rx="2" fill="#4C1D95" />
+    <rect x="7" y="16" width="111" h="11" rx="1" fill="#FAF8F5" opacity="0.95" />
+    
+    <rect x="0" y="0" width="120" h="16" rx="2" fill="#2A1745" />
+    <rect x="2" y="2" width="116" h="12" rx="1" fill="#EDE9F5" opacity="0.9" />
+  </g>
+
+  <!-- Main Standing 3D Book Cover (Right) -->
+  <g transform="translate(130, 20)">
+    <!-- Book 3D Spine -->
+    <path d="M0 25 L20 0 L20 170 L0 185 Z" fill="url(#spineGrad)" />
+    <!-- Spine Text Motif -->
+    <text x="-100" y="13" fill="#C4B5FD" font-size="9" font-family="serif" font-weight="bold" letter-spacing="3" transform="rotate(-90)">UNSTOPPABLE</text>
+
+    <!-- Main Front Cover -->
+    <path d="M20 0 L125 15 L125 180 L20 170 Z" fill="url(#coverGrad)" stroke="#6D28D9" stroke-width="1.5" />
+
+    <!-- Mountain Silhouette Artwork on Book Cover -->
+    <path d="M20 120 L50 95 L80 115 L105 85 L125 110 L125 180 L20 170 Z" fill="#4C1D95" opacity="0.8" />
+    <path d="M20 135 L60 110 L95 130 L125 105 L125 180 L20 170 Z" fill="#1C0D33" />
+
+    <!-- Figure Silhouette Standing on Mountain Peak -->
+    <path d="M72 100 C72 97 74 95 76 95 C78 95 80 97 80 100 C80 104 72 115 72 115 L84 115 C84 115 76 104 76 100 Z" fill="#F3E8FF" />
+
+    <!-- Book Title on Cover -->
+    <text x="35" y="45" fill="#FFFFFF" font-size="11" font-family="serif" font-weight="bold" letter-spacing="2">UNSTOPPABLE</text>
+    <text x="42" y="160" fill="#C4B5FD" font-size="6" font-family="sans-serif" letter-spacing="1">MEENA CHHABBRIA</text>
+  </g>
+</svg>

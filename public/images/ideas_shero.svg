@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" fill="none">
+  <defs>
+    <linearGradient id="sheroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E9DCFF" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#C4A7F5" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#9333EA" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B21B6" />
+      <stop offset="100%" stop-color="#3B1578" />
+    </linearGradient>
+  </defs>
+
+  <!-- Purple Organic Backdrop Circle -->
+  <circle cx="135" cy="140" r="92" fill="url(#sheroGrad)" />
+  
+  <!-- Crown Icon Floating Above -->
+  <path d="M135 28 L143 42 L156 32 L151 50 L119 50 L114 32 L127 42 Z" fill="#3B1578" />
+  <circle cx="135" cy="26" r="2.5" fill="#5B21B6" />
+  <circle cx="114" cy="30" r="2" fill="#5B21B6" />
+  <circle cx="156" cy="30" r="2" fill="#5B21B6" />
+
+  <!-- 3D Staircase Motif -->
+  <path d="M170 190 L210 190 L210 175 L190 175 L190 160 L175 160 L175 145 L160 145 L160 130 L150 130 L150 115 L170 115 Z" fill="#4C1D95" opacity="0.85" />
+  <path d="M170 190 L170 230 L210 230 L210 190 Z" fill="#3B1578" opacity="0.7" />
+  <path d="M190 175 L190 215 L210 215 L210 175 Z" fill="#5B21B6" opacity="0.6" />
+
+  <!-- Woman's Silhouette Portrait -->
+  <g transform="translate(30, 20)">
+    <!-- Hair contour -->
+    <path d="M80 60 C60 65 50 85 45 110 C40 135 42 165 48 190 C50 200 45 220 35 240 L105 240 C110 215 115 180 110 150 C105 130 95 110 90 90 C88 75 85 65 80 60 Z" fill="#1C1628" />
+    <!-- Facial Profile contour -->
+    <path d="M80 75 C88 75 96 82 98 92 C100 100 95 108 98 114 C100 118 106 120 108 123 C105 127 98 128 95 132 C93 138 98 145 92 152 C88 158 82 162 82 170 C82 180 88 200 90 220 L65 220 C65 190 62 160 68 130 C70 120 72 100 80 75 Z" fill="#2A203F" />
+    <!-- Professional Blazer Suit -->
+    <path d="M50 185 L80 165 L105 185 L125 240 L35 240 Z" fill="url(#suitGrad)" />
+    <path d="M80 165 L88 210 L72 210 Z" fill="#FFFFFF" opacity="0.9" />
+  </g>
+
+  <!-- Foreground Leaf Plants -->
+  <path d="M65 240 C60 210 75 190 85 180 C80 200 85 220 95 240 Z" fill="#5B21B6" />
+  <path d="M55 240 C50 225 55 210 65 200 C62 215 65 230 75 240 Z" fill="#7C3AED" />
+</svg>

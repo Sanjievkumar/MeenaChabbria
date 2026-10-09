@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 260" fill="none">
+  <defs>
+    <radialGradient id="skyGlow" cx="60%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#E9DCFF" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#C4A7F5" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#FAF8F5" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Sky Atmospheric Glow -->
+  <circle cx="180" cy="120" r="110" fill="url(#skyGlow)" />
+
+  <!-- Crescent Moon & Sun backdrop -->
+  <circle cx="200" cy="80" r="28" fill="#F3E8FF" opacity="0.9" />
+  <path d="M210 60 C195 60 185 75 185 90 C185 105 195 115 210 115 C200 115 192 105 192 90 C192 75 200 60 210 60 Z" fill="#6D28D9" opacity="0.4" />
+
+  <!-- Birds in flight -->
+  <path d="M140 60 Q145 55 150 60 Q155 55 160 60" stroke="#4C1D95" stroke-width="1.5" fill="none" />
+  <path d="M165 72 Q169 68 173 72 Q177 68 181 72" stroke="#4C1D95" stroke-width="1.2" fill="none" />
+
+  <!-- Palm Tree Silhouettes (Right Edge) -->
+  <g fill="#2A1745" transform="translate(225, 110)">
+    <path d="M15 110 Q20 60 25 0 L20 0 Q15 60 10 110 Z" />
+    <!-- Fronds -->
+    <path d="M22 10 Q5 -5 -15 5 Q5 15 22 10 Z" />
+    <path d="M22 10 Q35 -10 45 5 Q32 15 22 10 Z" />
+    <path d="M22 10 Q10 -20 0 -30 Q10 -5 22 10 Z" />
+  </g>
+
+  <!-- Cinema Equipment: Tripod & Camera (Center-Left) -->
+  <g transform="translate(60, 80)">
+    <!-- Tripod Legs -->
+    <line x1="60" y1="70" x2="20" y2="170" stroke="#1C0D33" stroke-width="4" stroke-linecap="round" />
+    <line x1="60" y1="70" x2="60" y2="170" stroke="#1C0D33" stroke-width="4" stroke-linecap="round" />
+    <line x1="60" y1="70" x2="100" y2="170" stroke="#1C0D33" stroke-width="4" stroke-linecap="round" />
+    <line x1="30" y1="130" x2="90" y2="130" stroke="#4C1D95" stroke-width="2" />
+
+    <!-- Camera Body -->
+    <rect x="35" y="30" width="55" h="40" rx="4" fill="#2A1745" stroke="#6D28D9" stroke-width="1.5" />
+    
+    <!-- Twin Film Reels Top -->
+    <circle cx="45" cy="18" r="16" fill="#1C0D33" stroke="#8B5CF6" stroke-width="2" />
+    <circle cx="45" cy="18" r="5" fill="#C4B5FD" />
+    
+    <circle cx="75" cy="18" r="16" fill="#1C0D33" stroke="#8B5CF6" stroke-width="2" />
+    <circle cx="75" cy="18" r="5" fill="#C4B5FD" />
+
+    <!-- Matte Box / Lens Hood -->
+    <path d="M90 35 L120 25 L120 75 L90 65 Z" fill="#1C0D33" stroke="#6D28D9" stroke-width="1.5" />
+    <circle cx="90" cy="50" r="12" fill="#5B21B6" />
+  </g>
+
+  <!-- Movie Clapperboard (Foreground Right) -->
+  <g transform="translate(170, 160)">
+    <rect x="0" y="15" width="50" h="40" rx="3" fill="#1C0D33" stroke="#8B5CF6" stroke-width="1.5" />
+    
+    <!-- Top Clapper Stick Rotated -->
+    <g transform="rotate(-12, 0, 15)">
+      <rect x="0" y="0" width="50" h="12" fill="#3B1578" />
+      <polygon points="5,0 12,0 7,12 0,12" fill="#FAF8F5" />
+      <polygon points="20,0 27,0 22,12 15,12" fill="#FAF8F5" />
+      <polygon points="35,0 42,0 37,12 30,12" fill="#FAF8F5" />
+    </g>
+  </g>
+</svg>
