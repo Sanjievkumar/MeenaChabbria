@@ -1,141 +1,187 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FeaturedIn } from './FeaturedIn';
+import { ArrowDown } from 'lucide-react';
+import { Navbar } from './Navbar';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative bg-[#F7F5F0] min-h-[calc(100vh-80px)] flex flex-col justify-between overflow-hidden text-[#18151D]">
-      
-      {/* Background Soft Purple Lighting & Decorative Panel Accents */}
-      <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-purple-100/25 rounded-full blur-3xl pointer-events-none -z-0"></div>
-      
-      {/* Far Right Marble Margin Accent Strip */}
-      <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-purple-200/30 via-purple-100/20 to-transparent pointer-events-none -z-0 border-l border-[#E3DDD3]/40"></div>
-      
-      {/* Bottom Left Translucent Lavender Block */}
-      <div className="absolute left-0 bottom-0 w-28 sm:w-36 h-36 sm:h-44 bg-[#C0A6F2]/30 pointer-events-none -z-0"></div>
+    <section
+      id="hero"
+      className="relative min-h-screen lg:h-screen lg:max-h-screen w-full bg-[#0C0A10] text-white flex flex-col justify-between overflow-hidden"
+    >
+      {/* 1. Full-width Authentic Hero Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-no-repeat bg-[62%_top] sm:bg-[63%_top] md:bg-[63%_15%] lg:bg-[62%_15%] xl:bg-[61%_18%] z-0"
+        style={{
+          backgroundImage: `url('/images/hero_bg_authentic.jpg')`,
+        }}
+        role="img"
+        aria-label="Meena Chhabbria - Authentic Portrait"
+      />
 
-      {/* Main Container Grid matching Hero mockup */}
-      <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-12 pt-6 pb-10 flex-1 flex flex-col justify-center relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
+      {/* 2. Warm Multiply Layer: Neutralizes the white haze and restores the warm hotel interior */}
+      <div 
+        className="absolute inset-y-0 left-0 w-full md:w-[75%] lg:w-[65%] z-[1] pointer-events-none"
+        style={{
+          background: 'linear-gradient(90deg, #16101A 0%, #1A121D 24%, #2E201B 40%, #4D3728 54%, #7E5F46 66%, #C4A788 78%, #FFFFFF 88%, #FFFFFF 100%)',
+          mixBlendMode: 'multiply',
+        }}
+      />
+
+      {/* 3. Directional Dark Gradient: Ensures high-contrast readability behind headline and text */}
+      <div 
+        className="absolute inset-y-0 left-0 w-full md:w-[62%] lg:w-[50%] z-[2] pointer-events-none"
+        style={{
+          background: 'linear-gradient(90deg, rgba(12, 10, 16, 0.95) 0%, rgba(12, 10, 16, 0.88) 28%, rgba(12, 10, 16, 0.5) 50%, rgba(12, 10, 16, 0.1) 70%, transparent 82%)',
+        }}
+      />
+
+      {/* Subtle top vignette for nav contrast */}
+      <div 
+        className="absolute top-0 inset-x-0 h-24 z-[2] pointer-events-none"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(12, 10, 16, 0.55) 0%, rgba(12, 10, 16, 0.15) 70%, transparent 100%)',
+        }}
+      />
+
+      {/* Subtle bottom vignette for statistics readability */}
+      <div 
+        className="absolute bottom-0 inset-x-0 h-28 z-[2] pointer-events-none"
+        style={{
+          background: 'linear-gradient(to top, rgba(12, 10, 16, 0.6) 0%, rgba(12, 10, 16, 0.15) 70%, transparent 100%)',
+        }}
+      />
+
+      {/* 4. Top Navigation */}
+      <Navbar activeSection="about" />
+
+      {/* 5. Main Hero Content Area */}
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 w-full flex-1 flex flex-col justify-center py-4 lg:py-6">
+        <div className="flex items-center justify-between w-full">
           
-          {/* Left Vertical Section Marker "01" */}
-          <div className="hidden lg:flex lg:col-span-1 flex-col items-start pt-2 border-r border-[#E3DDD3] pr-4 self-stretch justify-start">
-            <span className="text-[12px] font-mono text-[#4C1D95] tracking-widest font-bold">01</span>
-            <div className="w-[1px] h-32 bg-[#E3DDD3] mt-4"></div>
-          </div>
-
-          {/* Hero Left Main Text Content */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="lg:col-span-6 z-10 space-y-6 lg:pr-4"
+          {/* Left: Cohesive Editorial Content Block with Left Border Anchor */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="relative pl-5 sm:pl-6 border-l border-white/20 flex flex-col items-start max-w-[440px]"
           >
-            {/* Tagline Badge */}
-            <div className="flex items-center gap-3">
-              <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.25em] text-[#4C1D95] uppercase">
-                PERSONAL PORTFOLIO
+            {/* Eyebrow */}
+            <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
+              <span className="text-[9.5px] sm:text-[10px] font-semibold tracking-[0.22em] text-[#E4DDF2] uppercase whitespace-nowrap">
+                BUSINESS LEADER · AUTHOR · SUCCESS COACH
               </span>
-              <div className="h-[1px] w-20 bg-[#C4BAAA]"></div>
+              <div className="hidden sm:block w-12 lg:w-20 h-[1px] bg-white/20 ml-1"></div>
             </div>
 
-            {/* Giant Title MEENA CHHABBRIA */}
-            <div className="relative pt-1">
-              <h1 className="font-serif-title font-medium text-[62px] sm:text-[84px] lg:text-[104px] xl:text-[118px] leading-[0.86] tracking-tight text-[#141118]">
-                MEENA<br />
-                CHHABBRIA
-              </h1>
-            </div>
+            {/* Three-Line Editorial Headline */}
+            <h1 className="font-serif text-[44px] sm:text-[54px] md:text-[62px] lg:text-[66px] xl:text-[76px] leading-[0.88] tracking-tight font-medium text-white mb-3 sm:mb-3.5">
+              <span className="block">People.</span>
+              <span className="block">Purpose.</span>
+              <span className="block font-normal italic text-[#D8B4FE]">Persistence.</span>
+            </h1>
 
-            {/* Sub-headline with Purple Italic "Purpose" */}
-            <p className="font-serif-title text-2xl sm:text-3xl lg:text-4xl leading-snug text-[#2C2735] max-w-xl pt-1">
-              Great Brands Are Built on People,{' '}
-              <span className="text-[#4C1D95] italic font-normal">Purpose</span> & Persistence.
+            {/* Supporting Paragraph (Compact Width, 4 Lines, Clear of Silhouette) */}
+            <p className="text-[12.5px] sm:text-[13.5px] lg:text-[14px] leading-[1.58] text-[#D2CCE0] font-light tracking-wide max-w-[390px]">
+              From humble beginnings to leadership in cinema and entertainment, my journey has been about turning challenges into opportunities — and creating a more equitable tomorrow for women.
             </p>
 
-            {/* Stat Callout Badge: 21+ */}
-            <div className="pt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 border-t border-[#E3DDD3]">
-              <span className="font-serif-title text-6xl sm:text-7xl lg:text-8xl font-semibold text-[#4C1D95] leading-none">
-                21+
+            {/* Mobile / Tablet Mission Panel Reflow */}
+            <div className="lg:hidden mt-6 pt-4 border-t border-white/15 w-full max-w-[340px]">
+              <span className="text-[9.5px] font-semibold tracking-[0.24em] text-[#F472B6] uppercase block mb-1">
+                MY MISSION
               </span>
-              <div className="hidden sm:block h-14 w-[2px] bg-[#4C1D95]/40"></div>
-              <p className="text-[11px] sm:text-[12px] font-bold tracking-[0.2em] text-[#4A4354] uppercase leading-relaxed max-w-xs">
-                YEARS BUILDING ACROSS CINEMA, ENTERTAINMENT AND EDUTAINMENT
+              <p className="font-serif italic text-base sm:text-lg leading-snug text-white">
+                Creating opportunities for 100,000 women to learn, earn and lead.
               </p>
+              <div className="w-8 h-[1.5px] bg-[#D8B4FE] mt-2.5"></div>
             </div>
           </motion.div>
 
-          {/* Hero Center-Right Seated Photo Composition */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-            className="lg:col-span-4 relative flex justify-center lg:justify-end min-h-[460px]"
+          {/* Right Side: Narrow, Vertically Stacked Mission Panel on Far Right */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            className="hidden lg:flex flex-col items-start pl-5 xl:pl-6 border-l border-white/20 py-2 ml-auto mr-0 my-auto shrink-0"
           >
-            {/* Left Translucent Lavender Vertical Block */}
-            <div className="absolute -left-10 top-0 bottom-0 w-28 sm:w-36 bg-[#D8C7F5]/45 pointer-events-none -z-0"></div>
-
-            {/* Seated Portrait Frame displaying hero_meena_section1.png */}
-            <div className="relative z-10 w-full max-w-[420px] lg:max-w-[460px] aspect-[4/5] p-2 bg-[#EFECE6] border border-[#D5CDBF] shadow-2xl overflow-hidden group">
-              <div className="w-full h-full relative overflow-hidden bg-stone-200">
-                <img 
-                  src="/images/hero_meena_section1.png" 
-                  alt="Meena Chhabbria - Seated Portrait" 
-                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  onError={(e) => {
-                    e.currentTarget.src = "/images/grey_hero_authentic.png";
-                  }}
-                />
-                
-                {/* Ambient lighting overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
-              </div>
-            </div>
+            <span className="text-[10px] xl:text-[10.5px] font-semibold tracking-[0.24em] text-[#F472B6] uppercase mb-2">
+              MY MISSION
+            </span>
+            <p className="font-serif italic text-base lg:text-[18px] xl:text-[19px] leading-[1.28] text-white w-[130px]">
+              Creating opportunities for 100,000 women to learn, earn and lead.
+            </p>
+            <div className="w-8 h-[1.5px] bg-[#D8B4FE] mt-3"></div>
           </motion.div>
-
-          {/* Hero Far-Right Vertical Typography & Circular Badge Column */}
-          <div className="hidden lg:flex lg:col-span-1 flex-col justify-between items-end self-stretch py-4 pl-4 border-l border-[#E3DDD3]/60 relative z-10">
-            
-            {/* Cursive handwritten rotated text "People Purpose Persistence." */}
-            <div className="relative h-64 flex items-center justify-center">
-              <div className="font-script-title text-3xl xl:text-4xl text-[#4C1D95] font-bold whitespace-nowrap transform -rotate-90 origin-center tracking-wide">
-                People Purpose Persistence.
-              </div>
-            </div>
-
-            {/* Vertical list and italic statement */}
-            <div className="space-y-4 text-right">
-              <div className="space-y-1 text-[10px] font-bold tracking-[0.25em] text-[#6B5E77] uppercase">
-                <p>CINEMA</p>
-                <p>ENTERTAINMENT</p>
-                <p>EDUTAINMENT</p>
-              </div>
-
-              <div className="pt-2 text-[12px] font-serif italic text-[#4A4354] leading-tight">
-                Ideas.<br />
-                People.<br />
-                Progress.
-              </div>
-
-              {/* Circular Badge "THE BODY OF WORK" */}
-              <div className="pt-4 flex justify-end">
-                <div className="w-16 h-16 rounded-full border border-[#8C7A9C] flex flex-col items-center justify-center p-1 text-center relative group cursor-pointer hover:border-[#4C1D95] transition-colors">
-                  <span className="text-[7px] font-bold tracking-widest text-[#4C1D95] uppercase">THE BODY</span>
-                  <div className="w-6 h-[1px] bg-[#4C1D95] my-0.5 transform -rotate-45"></div>
-                  <span className="text-[7px] font-bold tracking-widest text-[#4C1D95] uppercase">OF WORK</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
 
         </div>
       </div>
 
-      {/* Featured In Logos Bar at Bottom */}
-      <FeaturedIn />
+      {/* 6. Aligned Four-Column Statistics Row & Bottom-Right Scroll Indicator */}
+      <div className="relative z-10 w-full shrink-0">
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 pb-6 sm:pb-8 lg:pb-10 pt-2 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          
+          {/* Four Deliberate Columns with Consistent Dividers, Internal Padding, and Baseline Alignment */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-0 w-full max-w-[760px] xl:max-w-[820px]">
+            
+            {/* Stat 1: 21+ */}
+            <div className="border-l border-white/25 pl-4 sm:pl-5 lg:pl-6 flex flex-col justify-end">
+              <div className="font-serif lining-nums text-2xl sm:text-3xl lg:text-[34px] font-medium text-white leading-none tracking-tight mb-1.5">
+                21<span className="text-[#D8B4FE]">+</span>
+              </div>
+              <div className="text-[9px] sm:text-[9.5px] font-semibold tracking-[0.18em] text-[#C0B9D1] uppercase leading-snug whitespace-nowrap">
+                YEARS OF EXPERIENCE
+              </div>
+            </div>
 
+            {/* Stat 2: 272 */}
+            <div className="border-l border-white/25 pl-4 sm:pl-5 lg:pl-6 flex flex-col justify-end">
+              <div className="font-serif lining-nums text-2xl sm:text-3xl lg:text-[34px] font-medium text-white leading-none tracking-tight mb-1.5">
+                272
+              </div>
+              <div className="text-[9px] sm:text-[9.5px] font-semibold tracking-[0.18em] text-[#C0B9D1] uppercase leading-snug">
+                SCREENS ACROSS 5 STATES & SRI LANKA
+              </div>
+            </div>
+
+            {/* Stat 3: 100,000 */}
+            <div className="border-l border-white/25 pl-4 sm:pl-5 lg:pl-6 flex flex-col justify-end">
+              <div className="font-serif lining-nums text-2xl sm:text-3xl lg:text-[34px] font-medium text-white leading-none tracking-tight mb-1.5">
+                100,000
+              </div>
+              <div className="text-[9px] sm:text-[9.5px] font-semibold tracking-[0.18em] text-[#C0B9D1] uppercase leading-snug">
+                WOMEN EMPOWERMENT MISSION
+              </div>
+            </div>
+
+            {/* Stat 4: 500+ */}
+            <div className="border-l border-white/25 pl-4 sm:pl-5 lg:pl-6 flex flex-col justify-end">
+              <div className="font-serif lining-nums text-2xl sm:text-3xl lg:text-[34px] font-medium text-white leading-none tracking-tight mb-1.5">
+                500<span className="text-[#D8B4FE]">+</span>
+              </div>
+              <div className="text-[9px] sm:text-[9.5px] font-semibold tracking-[0.18em] text-[#C0B9D1] uppercase leading-snug whitespace-nowrap">
+                BRANDS & PARTNERSHIPS
+              </div>
+            </div>
+
+          </div>
+
+          {/* Subtle Scroll Indicator at Bottom-Right (Clear Separation from Statistics) */}
+          <div className="hidden lg:flex flex-col items-center justify-center gap-1 shrink-0 text-center pl-8 mb-0.5">
+            <a
+              href="#about"
+              aria-label="Scroll to explore"
+              className="w-8 h-8 rounded-full border border-white/25 flex items-center justify-center text-white/70 hover:text-white hover:border-[#D8B4FE] transition-all group"
+            >
+              <ArrowDown className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform text-[#D8B4FE]" />
+            </a>
+            <span className="text-[8px] font-semibold tracking-[0.2em] text-white/60 uppercase leading-tight block">
+              SCROLL<br />TO EXPLORE
+            </span>
+          </div>
+
+        </div>
+      </div>
     </section>
   );
 };

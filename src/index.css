@@ -1,22 +1,39 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-script: 'Caveat', cursive;
+}
+
 @layer base {
   :root {
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
     --font-script: 'Caveat', cursive;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #F7F5F0;
-    color: #18151D;
+    background-color: #0C0A10;
+    color: #FFFFFF;
     overflow-x: hidden;
   }
 }
 
+.font-serif {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.lining-nums {
+  font-variant-numeric: lining-nums;
+  -moz-font-feature-settings: "lnum" 1;
+  -webkit-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+}
+
 .font-serif-title {
-  font-family: var(--font-serif);
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
 }
 
 .font-script-title {
