@@ -5,7 +5,6 @@ export const Footer: React.FC = () => {
   const footerNavLinks = [
     { name: 'ABOUT', href: '#about' },
     { name: 'JOURNEY', href: '#journey' },
-    { name: 'PORTFOLIO', href: '#portfolio' },
     { name: 'IDEAS', href: '#ideas' },
     { name: 'PRINCIPLES', href: '#principles' },
     { name: 'NEXT CHAPTER', href: '#next-chapter' },
