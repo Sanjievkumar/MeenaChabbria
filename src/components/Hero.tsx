@@ -36,11 +36,11 @@ export const Hero: React.FC = () => {
         }}
       />
 
-      {/* Subtle top vignette for nav contrast */}
+      {/* Top vignette for superior nav contrast across bright chandelier */}
       <div 
-        className="absolute top-0 inset-x-0 h-24 z-[2] pointer-events-none"
+        className="absolute top-0 inset-x-0 h-32 lg:h-36 z-[2] pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, rgba(12, 10, 16, 0.55) 0%, rgba(12, 10, 16, 0.15) 70%, transparent 100%)',
+          background: 'linear-gradient(to bottom, rgba(12, 10, 16, 0.92) 0%, rgba(12, 10, 16, 0.70) 50%, rgba(12, 10, 16, 0.3) 80%, transparent 100%)',
         }}
       />
 

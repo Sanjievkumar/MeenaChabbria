@@ -17,27 +17,27 @@ export const Navbar: React.FC<NavbarProps> = () => {
   ];
 
   return (
-    <header className="relative w-full z-40 shrink-0">
+    <header className="relative w-full z-40 shrink-0 bg-gradient-to-b from-[#0C0A10]/85 via-[#0C0A10]/40 to-transparent">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 h-16 lg:h-20 flex items-center justify-between">
         
         {/* Left: Brand Wordmark with Horizontal Rule Line */}
         <div className="flex items-center">
           <a
             href="#hero"
-            className="font-serif tracking-[0.16em] font-medium text-base sm:text-lg text-white hover:text-purple-200 transition-colors uppercase whitespace-nowrap"
+            className="font-serif tracking-[0.16em] font-medium text-base sm:text-lg text-white hover:text-purple-200 transition-colors uppercase whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
           >
             MEENA CHHABBRIA
           </a>
           <span className="hidden md:inline-block w-12 lg:w-16 h-[1px] bg-white/30 ml-4 lg:ml-5"></span>
         </div>
 
-        {/* Center: Desktop Navigation Links (Clean, No Active Underline, Matching Reference) */}
-        <nav className="hidden lg:flex items-center space-x-7 xl:space-x-9">
+        {/* Center: Desktop Navigation Links (Translucent Frosted Pill for Contrast & Readability) */}
+        <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 px-6 py-2.5 rounded-full bg-[#0C0A10]/65 backdrop-blur-md border border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.5)]">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-[10.5px] xl:text-[11.5px] font-medium tracking-[0.2em] transition-colors py-1 uppercase whitespace-nowrap text-white/80 hover:text-white"
+              className="text-[11px] xl:text-[11.5px] font-semibold tracking-[0.2em] transition-colors py-0.5 uppercase whitespace-nowrap text-white/90 hover:text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]"
             >
               {link.name}
             </a>

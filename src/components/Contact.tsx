@@ -18,6 +18,23 @@ interface EngagementOpportunity {
   icon: React.ElementType;
 }
 
+const InstagramIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 const opportunities: EngagementOpportunity[] = [
   { title: 'KEYNOTES', icon: Users },
   { title: 'PANELS', icon: Calendar },
@@ -99,12 +116,16 @@ export const Contact: React.FC = () => {
             </h3>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm text-purple-200 font-medium">
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-purple-400" />
-                <span>Add email</span>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-purple-400" />
-                <span>Add phone</span>
+                <InstagramIcon className="w-4 h-4 text-purple-400" />
+                <a
+                  href="https://www.instagram.com/meena_chhabbria?dlrf=MWdvNzl3M2xqeHVqaA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-300 hover:text-white underline underline-offset-4 transition-colors inline-flex items-center gap-1"
+                >
+                  Instagram
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Globe className="w-4 h-4 text-purple-400" />
@@ -117,6 +138,14 @@ export const Contact: React.FC = () => {
                   meenachabbria.com
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-purple-400" />
+                <span>Add email</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-purple-400" />
+                <span>Add phone</span>
               </div>
             </div>
           </div>
