@@ -25,6 +25,7 @@ export const Footer: React.FC = () => {
     { name: 'IDEAS', href: '#ideas' },
     { name: 'PRINCIPLES', href: '#principles' },
     { name: 'NEXT CHAPTER', href: '#next-chapter' },
+    { name: 'BOOK A SESSION', href: '#booking' },
   ];
 
   return (
